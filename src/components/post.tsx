@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
         left:100
     },
     textContent:{
-        top:-30,
+        top:-40,
         margin:20,
         maxWidth:340
     },
@@ -56,9 +56,9 @@ const postUtilsStyle=StyleSheet.create({
 
 function PostUtils(props:any){
     return (<View style={postUtilsStyle.view}> 
-        <Button style={postUtilsStyle.button} title="Like" onPress={()=>{}}></Button>
-        <Button style={postUtilsStyle.button} title="Comment" onPress={()=>{}}></Button>
-        <Button style={postUtilsStyle.button} title="Share" onPress={()=>{}}></Button>
+        <Button style={postUtilsStyle.button} title="Like" onPress={()=>{console.log("like")}}></Button>
+        <Button style={postUtilsStyle.button} title="Comment" onPress={()=>{console.log("comment")}}></Button>
+        <Button style={postUtilsStyle.button} title="Share" onPress={()=>{console.log("share")}}></Button>
     </View>)
 }
 function Button(props:any){
