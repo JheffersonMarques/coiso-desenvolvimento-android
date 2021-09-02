@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View, Image, TextInput } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 import {Header} from './src/components/header';
 import {Post} from './src/components/post';
 
@@ -10,9 +10,10 @@ export default function App() {
             <Header></Header>
             <Post 
                 name="Unblast" 
-                text={<Text>Bruaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaahh</Text>}
+                text={<Text>Pain and Suffering Awaits</Text>}
                 image={require("./src/assets/image.png")}
             />
+            
             <StatusBar style="auto"/>
         </View>
     );
