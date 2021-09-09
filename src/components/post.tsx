@@ -50,7 +50,7 @@ const postUtilsStyle = StyleSheet.create({
     },
     button: {
         backgroundColor: "#FFFFFF",
-        width: 100,
+        width: 120,
     }
 })
 
@@ -77,8 +77,6 @@ function IconButton(props: any) {
             color: "#000000",
             backgroundColor: "#0099FF",
             textAlign: 'center',
-            padding: 10,
-            margin:10
         }, props.style]} onPress={props.onPress}>
             <Image source={props.src}/>
             {props.title}</Text>)
