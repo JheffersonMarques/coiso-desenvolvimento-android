@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
         paddingRight:10,
     },
 })
-export function Header(){
+export function Header(props:any){
     return (<View style={styles.header}>
         <Image source={
             require("../assets/arrow-left.png")
@@ -49,6 +49,6 @@ export function Header(){
             require("../assets/share.png")
             }>
         </Image>
-
+        {props.children}
     </View>)
 }
