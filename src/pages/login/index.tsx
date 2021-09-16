@@ -49,7 +49,7 @@ const Login = () => {
                 <TextInput style={styles.input} placeholder="E-mail"/>
             </View>
             <View style={{paddingTop:20}}>
-                <TextInput style={styles.input} placeholder="Password"/>
+                <TextInput style={styles.input} secureTextEntry={true} placeholder="Password"/>
             </View>
             <View style={{paddingTop:20}}>
                 <Button style={styles.button} title="Log in"></Button>
