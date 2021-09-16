@@ -4,13 +4,7 @@ import { StyleSheet, Text, ScrollView } from 'react-native';
 import { Header } from '../../components/header';
 import { Post } from '../../components/post';
 
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#c9c9c9'
-    }
-});
-
+import styles from "./styles"
 
 const Home = () =>{
     return (

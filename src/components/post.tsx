@@ -63,8 +63,7 @@ function PostUtils(props: any) {
 }
 
 function IconButton(props: any) {
-    return (
-        
+    return ( 
         <Text style={[{
             color: "#000000",
             backgroundColor: "#0099FF",
@@ -82,6 +81,6 @@ export function Post(props: any) {
         <Image style={styles.available} source={require("../assets/ion_earth.png")}></Image>
         <View style={styles.textContent}>{props.text}</View>
         <Image style={styles.imageContent} source={props.image} ></Image>
-        <PostUtils></PostUtils>
+        <PostUtils/>
     </View>)
 }
