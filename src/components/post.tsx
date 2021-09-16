@@ -61,15 +61,7 @@ function PostUtils(props: any) {
         <IconButton src={require("../assets/buttonShare.png")} style={postUtilsStyle.button} title="Share" onPress={() => { console.log("share") }}></IconButton>
     </View>)
 }
-function Button(props: any) {
-    return (
-        <Text style={[{
-            color: "#000000",
-            backgroundColor: "#0099FF",
-            textAlign: 'center',
-            padding: 10
-        }, props.style]} onPress={props.onPress} >{props.title}</Text>)
-}
+
 function IconButton(props: any) {
     return (
         
