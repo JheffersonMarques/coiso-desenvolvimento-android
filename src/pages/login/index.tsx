@@ -1,11 +1,21 @@
+import { useNavigation } from '@react-navigation/native';
+import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import React from 'react'
 import { Text, View, StyleSheet, Image, TextInput } from 'react-native';
 
 import Button from '../../components/button' 
+import { StackNavigationTypes } from '../../types';
 
 import styles from "./styles"
 
 const Login = () => {
+
+    type HomeProps = NativeStackNavigationProp<StackNavigationTypes,"Login">
+    const nav = useNavigation<HomeProps>()
+    
+    function goHome(){
+        nav.navigate("Home");
+    }
     return (
         <View style={styles.container}>
             <View style={styles.logoDiv}>
@@ -19,7 +29,7 @@ const Login = () => {
                 <TextInput style={styles.input} secureTextEntry={true} placeholder="Password"/>
             </View>
             <View style={{paddingTop:20}}>
-                <Button style={styles.button} title="Log in"></Button>
+                <Button style={styles.button} title="Log in" onPress={()=>{goHome()}}></Button>
             </View>
             <View style={{paddingTop:200}}>
                 <Text style={styles.signUp}>
