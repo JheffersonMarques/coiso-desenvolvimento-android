@@ -1,4 +1,4 @@
-import { StyleSheet, View, Image, Text } from 'react-native';
+import { StyleSheet, View, Image, Text, TouchableOpacity } from 'react-native';
 import React from 'react';
 
 
@@ -64,14 +64,20 @@ function PostUtils(props: any) {
 
 function IconButton(props: any) {
     return ( 
-        <Text style={[{
-            color: "#000000",
-            backgroundColor: "#0099FF",
-            textAlign: 'center',
-        }, props.style]} onPress={props.onPress}>
-            <Image source={props.src}/>
-            {props.title}</Text>)
-}
+        <View>
+            <TouchableOpacity>
+                <Text style={[{
+                    color: "#000000",
+                    backgroundColor: "#0099FF",
+                    textAlign: 'center',
+                }, props.style]} onPress={props.onPress}>
+                    <Image source={props.src}/>
+                {props.title}
+                </Text>
+            </TouchableOpacity>
+        </View>
+        )
+    }
 
 export function Post(props: any) {
     return (<View style={styles.container}>
