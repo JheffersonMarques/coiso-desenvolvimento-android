@@ -29,7 +29,7 @@ const Login = () => {
                 <TextInput style={styles.input} secureTextEntry={true} placeholder="Password"/>
             </View>
             <View style={{paddingTop:20}}>
-                <Button style={styles.button} title="Log in" onPress={()=>{goHome()}}></Button>
+                <Button style={styles.button} styleText={{color:"white"}}title="Log in" onPress={()=>{goHome()}}></Button>
             </View>
             <View style={{paddingTop:200}}>
                 <Text style={styles.signUp}>

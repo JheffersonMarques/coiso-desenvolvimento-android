@@ -5,12 +5,29 @@ import { useNavigation } from '@react-navigation/native'
 import { Header } from '../../components/header';
 import { Post } from '../../components/post';
 import Button from '../../components/button'
-import styles from "./styles"
+import { stylesLink,styles,stylesLinkImportantes } from "./styles"
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 
 import { StackNavigationTypes } from '../../types'
 
 
+
+const LinkItem = (props:any)=>{
+    return(
+        <Text style={stylesLink.text}>{props.name}</Text>
+    );
+}
+const LinksImportantes = ()=>{
+    return(//Aqui dentro ficarÃ¡ o nosso JSX
+        <View style={stylesLinkImportantes.container}>
+            <LinkItem name="Home"/>
+            <LinkItem name="Post"/>
+            <LinkItem name="Videos"/>
+            <LinkItem name="Photos"/>
+            <LinkItem name="Community"/>
+        </View>
+    );
+};
 
 const Home = () => {
     type HomeProps = NativeStackNavigationProp<StackNavigationTypes,"Home">
@@ -23,14 +40,33 @@ const Home = () => {
     return (
         <ScrollView style={styles.container}>
             <Header />
-            <Post
+            <LinksImportantes/>
+            <Post 
                     name="Unblast"
-                    text={<Text>Pain and Suffering Awaits</Text>}
+                    text={<Text>Este é o design que vamos replicar hoje na aula: <Text style={{color:"#4D6196", textDecorationLine:'underline'}}>https://mockupsfreebies.com/social-media/facebook/free-facebook-mobile-post-mockup</Text></Text>}
                     image={require("../../assets/image.png")}
+                    likes="12"
+                />
+                <Post
+                    name="Unblast"
+                    text={<Text>Este é o design que vamos replicar hoje na aula: <Text style={{color:"#4D6196", textDecorationLine:'underline'}}>https://mockupsfreebies.com/social-media/facebook/free-facebook-mobile-post-mockup</Text></Text>}
+                    image={require("../../assets/image.png")}
+                    likes="12"
+                />
+                <Post
+                    name="Unblast"
+                    text={<Text>Este é o design que vamos replicar hoje na aula: <Text style={{color:"#4D6196", textDecorationLine:'underline'}}>https://mockupsfreebies.com/social-media/facebook/free-facebook-mobile-post-mockup</Text></Text>}
+                    image={require("../../assets/image.png")}
+                    likes="12"
+                />
+                <Post
+                    name="Unblast"
+                    text={<Text>Este é o design que vamos replicar hoje na aula: <Text style={{color:"#4D6196", textDecorationLine:'underline'}}>https://mockupsfreebies.com/social-media/facebook/free-facebook-mobile-post-mockup</Text></Text>}
+                    image={require("../../assets/image.png")}
+                    likes="12"
                 />
 
-            <Button style={styles.button}title="Go to next page" onPress={()=>{goLogin()}}>
-
+            <Button style={styles.button} styleText={{color:"white"}}title="Go to next page" onPress={()=>{goLogin()}}>
             </Button>
 
         </ScrollView>

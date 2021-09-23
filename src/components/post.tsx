@@ -1,6 +1,7 @@
-import { StyleSheet, View, Image, Text, TouchableOpacity } from 'react-native';
+import { StyleSheet, View, Image, Text } from 'react-native';
 import React from 'react';
 
+import IconButton from "../components/iconButton"
 
 const styles = StyleSheet.create({
     container: {
@@ -36,10 +37,18 @@ const styles = StyleSheet.create({
     },
     imageContent: {
         top: -30,
-        width: 350,
-        height: 300,
+        width: 360,
+        height: 275,
         resizeMode: "stretch",
 
+    },
+    likeInfo:{
+        paddingLeft:20,
+        flexDirection: 'row'
+    },
+    likeText:{
+        paddingLeft:5,
+        textAlignVertical:'center'
     }
 
 })
@@ -49,6 +58,7 @@ const postUtilsStyle = StyleSheet.create({
         justifyContent: "space-evenly",
     },
     button: {
+        color:"black",
         backgroundColor: "#FFFFFF",
         width: 120,
     }
@@ -62,23 +72,6 @@ function PostUtils(props: any) {
     </View>)
 }
 
-function IconButton(props: any) {
-    return ( 
-        <View>
-            <TouchableOpacity>
-                <Text style={[{
-                    color: "#000000",
-                    backgroundColor: "#0099FF",
-                    textAlign: 'center',
-                }, props.style]} onPress={props.onPress}>
-                    <Image source={props.src}/>
-                {props.title}
-                </Text>
-            </TouchableOpacity>
-        </View>
-        )
-    }
-
 export function Post(props: any) {
     return (<View style={styles.container}>
         <View style={styles.user}></View>
@@ -87,6 +80,10 @@ export function Post(props: any) {
         <Image style={styles.available} source={require("../assets/ion_earth.png")}></Image>
         <View style={styles.textContent}>{props.text}</View>
         <Image style={styles.imageContent} source={props.image} ></Image>
+        <View style={styles.likeInfo}>
+            <Image source={require("../assets/like-bg-blue.png")}></Image>
+            <Text style={styles.likeText}>{props.likes}</Text>
+        </View>
         <PostUtils/>
     </View>)
 }
