@@ -38,38 +38,37 @@ const Home = () => {
     }
 
     return (
-        <ScrollView style={styles.container}>
+        <View style={styles.container}>
             <Header />
             <LinksImportantes/>
+            <ScrollView>
             <Post 
                     name="Unblast"
                     text={<Text>Este é o design que vamos replicar hoje na aula: <Text style={{color:"#4D6196", textDecorationLine:'underline'}}>https://mockupsfreebies.com/social-media/facebook/free-facebook-mobile-post-mockup</Text></Text>}
                     image={require("../../assets/image.png")}
-                    likes="12"
+                    likes={12}
                 />
                 <Post
                     name="Unblast"
                     text={<Text>Este é o design que vamos replicar hoje na aula: <Text style={{color:"#4D6196", textDecorationLine:'underline'}}>https://mockupsfreebies.com/social-media/facebook/free-facebook-mobile-post-mockup</Text></Text>}
                     image={require("../../assets/image.png")}
-                    likes="12"
+                    likes={12}
                 />
                 <Post
                     name="Unblast"
                     text={<Text>Este é o design que vamos replicar hoje na aula: <Text style={{color:"#4D6196", textDecorationLine:'underline'}}>https://mockupsfreebies.com/social-media/facebook/free-facebook-mobile-post-mockup</Text></Text>}
                     image={require("../../assets/image.png")}
-                    likes="12"
+                    likes={12}
                 />
                 <Post
                     name="Unblast"
                     text={<Text>Este é o design que vamos replicar hoje na aula: <Text style={{color:"#4D6196", textDecorationLine:'underline'}}>https://mockupsfreebies.com/social-media/facebook/free-facebook-mobile-post-mockup</Text></Text>}
                     image={require("../../assets/image.png")}
-                    likes="12"
+                    likes={12}
                 />
-
-            <Button style={styles.button} styleText={{color:"white"}}title="Go to next page" onPress={()=>{goLogin()}}>
-            </Button>
-
+                <Button title="Go to Login" onPress={() => goLogin()}></Button>
         </ScrollView>
+        </View>
     );
 }
 
