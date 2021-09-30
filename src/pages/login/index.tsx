@@ -1,6 +1,6 @@
 import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
-import React from 'react'
+import React, { useState } from 'react'
 import { Text, View, StyleSheet, Image, TextInput } from 'react-native';
 
 import Button from '../../components/button' 
@@ -16,6 +16,8 @@ const Login = () => {
     function goHome(){
         nav.navigate("Home");
     }
+    
+    
     return (
         <View style={styles.container}>
             <View style={styles.logoDiv}>
@@ -23,7 +25,7 @@ const Login = () => {
                 <Text style={styles.logoText}>Facebook</Text>
             </View>
             <View style={{paddingTop:60}}> 
-                <TextInput style={styles.input} placeholder="E-mail"/>
+                <TextInput style={styles.input} placeholder="E-mail" />
             </View>
             <View style={{paddingTop:20}}>
                 <TextInput style={styles.input} secureTextEntry={true} placeholder="Password"/>

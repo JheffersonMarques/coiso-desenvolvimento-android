@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
         color:"black",
     }
 })
-const IconButton = (props: any) => {
+export const IconButton = (props: any) => {
     return (
     <TouchableOpacity style={[styles.meubotao,props.style]} onPress={props.onPress}>
         <Image source={props.src}></Image>
@@ -27,4 +27,10 @@ const IconButton = (props: any) => {
     )
 }
 
-export default IconButton;
+export const OnlyIconButton = (props: any) => {
+    return (
+    <TouchableOpacity style={[styles.meubotao,props.style]} onPress={props.onPress}>
+        <Image source={props.src}></Image>
+    </TouchableOpacity>
+    )
+}
